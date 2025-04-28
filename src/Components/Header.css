@@ -1,0 +1,235 @@
+/* Global */
+.header {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #131211;
+    z-index: 1000;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-white {
+    color: #fff;
+    z-index: 9000;
+  }
+  
+  .logo-pink {
+    color: #fff;
+    margin-left: 2px;
+    z-index: 9000;
+  }
+  
+  .logo-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #d13ce4;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 4px;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+  
+  .desktop-nav {
+    display: flex;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .nav-link span {
+    display: flex;
+    flex-direction: column; /* desktop default */
+    align-items: center;
+  }
+  
+  .underline-img {
+    height: 15px;
+    margin-top: 4px;
+  }
+
+  .underline-image {
+    height: 20px;
+    margin-top: 20px;
+    margin-left: -50px;
+  }
+  
+  .connect-btn {
+    padding: 12px 24px;
+    /* background: linear-gradient(90deg, #b026e0 0%, #d13ce4 50%, #f2733e 100%); */
+    background: linear-gradient(270deg, #DF8908 0%, #B415FF 100%);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .connect-desktop {
+    display: inline-block;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .desktop-nav {
+      display: none !important;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .desktop-nav.navOpen {
+      display: block !important;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    .connect-desktop {
+      display: none !important;
+    }
+  
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100%;
+      background-color: #1f0016;
+      z-index: 2000;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      animation: slideIn 0.3s ease forwards;
+    }
+  
+    .close-button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 30px;
+      align-self: flex-end;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+  
+    .mobile-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+    }
+  
+    .mobile-nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  
+    /* Fix: Menu text + underline in row on mobile */
+    .mobile-nav-link span {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px; /* margin between text and underline */
+    }
+  
+    .mobile-nav-link img {
+      height: 10px;
+    }
+  }
+  
+  .nav-item-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* == */
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item-content.column {
+    flex-direction: column;
+  }
+  
+  .nav-item-content.row {
+    flex-direction: row;
+  }
+
+  /* === */
+  .nav-item-content span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item-content.active span {
+    transform: translateY(-5px); /* slightly move up */
+  }
+  
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  

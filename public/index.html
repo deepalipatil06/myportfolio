@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* @media (max-width: 768px) {
+        .hamburger {
+          display: flex !important;
+        }
+        nav {
+          display: none !important;
+          flex-direction: column !important;
+        }
+        nav.navOpen {
+          display: block !important;
+        }
+        ul {
+          flex-direction: column !important;
+          gap: 20px !important;
+          align-items: center;
+        }
+      } */
+    /* @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+      }
+
+      nav {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100%;
+      }
+
+      nav.navOpen {
+        display: block !important;
+      }
+
+      nav ul {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      .connect-desktop {
+        display: none !important;
+      }
+    } */
+    
+  /* Base styles - desktop first */
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .connect-desktop {
+    display: inline-block;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Responsive styles - for screens 768px and below */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex !important;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+  /* @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  } */
+
+    nav {
+      display: none !important;
+      flex-direction: column !important;
+      width: 100%;
+      background-color: #131211;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      z-index: 999;
+      padding: 20px 0;
+    }
+
+    nav.navOpen {
+      display: flex !important;
+    }
+
+    nav ul {
+      flex-direction: column !important;
+      gap: 20px !important;
+      align-items: center;
+    }
+
+    .connect-desktop {
+      display: none !important;
+    }
+  }
+</style>
+
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="GreatStack Inspired React Portfolio" />
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Title -->
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+</html>
